@@ -1,11 +1,26 @@
-import { useState } from "react";
+import { useState,useEffect } from "react";
 import { Navbar, ResumeCard } from "./components/index";
 import "./App.css";
 import { resumes } from "./constants";
 
+import { usePuterStore } from "./store/puter";
+import { useNavigate } from "react-router-dom";
+
 function App() {
+  const {init}=usePuterStore();
+  useEffect(() => {
+    init()
+   
+  }, [init]);
+   const {auth}=usePuterStore();
+   const navigate=useNavigate()
+     useEffect(() => {
+       if (!auth.isAuthenticated) navigate('/auth?next=/')
+     }, [auth.isAuthenticated]);
+     
   return (
     <>
+    
       <main className="bg-[url('/images/bg-main.svg')] bg-cover">
         <Navbar />
         <section className="main-section">
