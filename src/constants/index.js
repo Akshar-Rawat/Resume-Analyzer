@@ -106,7 +106,7 @@ export const AIResponseFormat = `
       };
     }`;
 
-export const prepareInstructions = ({ jobTitle, jobDescription, AIResponseFormat }) => {
+export const prepareInstructions = ({ jobTitle, jobDescription,  }) => {
   if (typeof jobTitle !== 'string' || jobTitle.trim() === '') {
     throw new Error('Invalid jobTitle: must be a non-empty string');
   }
