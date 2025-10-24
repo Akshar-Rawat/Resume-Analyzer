@@ -6,6 +6,7 @@ import Auth from './components/Auth.jsx'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import Upload from './components/Upload.jsx'
 import Resume from './components/Resume.jsx'
+import WipeApp from './components/Wipe.jsx'
 
 const router = createBrowserRouter([
   {
@@ -25,6 +26,10 @@ const router = createBrowserRouter([
     path:"/resume/:id",
     element:<Resume/>
   },
+  {
+    path:"/wipe",
+    element:<WipeApp/>
+   },
 
 ]);
 
