@@ -10,7 +10,6 @@ const Resume = () => {
   const [resumeUrl, setResumeUrl] = useState('');
   const [feedback, setFeedback] = useState(null);
   const navigate = useNavigate();
-
   const { kv, fs, auth, isLoading } = usePuterStore();
   const { id } = useParams();
    useEffect(() => {
