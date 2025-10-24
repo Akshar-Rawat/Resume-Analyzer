@@ -5,6 +5,7 @@ import App from './App.jsx'
 import Auth from './components/Auth.jsx'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import Upload from './components/Upload.jsx'
+import Resume from './components/Resume.jsx'
 
 const router = createBrowserRouter([
   {
@@ -18,7 +19,13 @@ const router = createBrowserRouter([
   {
     path:"/upload",
     element:<Upload/>
-  }
+  },
+  
+  {
+    path:"/resume/:id",
+    element:<Resume/>
+  },
+
 ]);
 
 createRoot(document.getElementById('root')).render(
