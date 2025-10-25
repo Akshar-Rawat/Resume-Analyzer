@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
-import { Navbar, ResumeCard } from "./components/index";
 import "./App.css";
-
+import {Navbar} from './components/Navbar';
+import {ResumeCard} from './components/ResumeCard';
 import { usePuterStore } from "./store/puter";
 import {Link, useNavigate } from "react-router-dom";
 
